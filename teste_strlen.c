@@ -1,23 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   teste_strlen.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: davidos- <davidos-@student.42porto.co      +#+  +:+       +#+        */
+/*   By: davidos- <davidos-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/13 20:03:14 by davidos-          #+#    #+#             */
-/*   Updated: 2025/10/14 10:34:26 by davidos-         ###   ########.fr       */
+/*   Created: 2025/10/14 10:52:36 by davidos-          #+#    #+#             */
+/*   Updated: 2025/10/14 11:18:40 by davidos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_libft.h"
+#include <stdio.h>
 
-int	ft_isascii(int c)
+int	teste_strlen(void)
 {
-	int	i;
+	int	i; 
+	char *c[] = {"acbd5++-4", "0", "02", "++1-", "\0"};
 
 	i = 0;
-	if (c >= 0 && i <= 127)
-		return (1);
-	return (0);
+	while (i < 4)
+	{
+		printf("lenght %d = %d\n", i, ft_strlen(c[i]));
+		i++;
+	}
+	return (0);  
 }

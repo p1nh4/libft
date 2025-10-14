@@ -1,0 +1,17 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    notas-libft.txt                                    :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: davidos- <marvin@42.fr>                    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2025/10/13 14:33:49 by davidos-          #+#    #+#              #
+#    Updated: 2025/10/13 14:49:30 by davidos-         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+Dividir a pasta de testes 
+
+O Linker deve ter todas as funcoes que chama para o compilador
+ex: cc -Wall -Wextra -Werror teste_isalnum.c ft_isalnum.c ft_isalpha.c ft_isdigit.c main.c
+

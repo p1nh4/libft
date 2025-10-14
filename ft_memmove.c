@@ -1,23 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: davidos- <davidos-@student.42porto.co      +#+  +:+       +#+        */
+/*   By: davidos- <davidos-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/13 20:03:14 by davidos-          #+#    #+#             */
-/*   Updated: 2025/10/14 10:34:26 by davidos-         ###   ########.fr       */
+/*   Created: 2025/10/14 17:40:48 by davidos-          #+#    #+#             */
+/*   Updated: 2025/10/14 18:57:06 by davidos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_libft.h"
 
-int	ft_isascii(int c)
+void	*ft_memmove(char *dest, const char *src, int n)
 {
 	int	i;
-
+	
 	i = 0;
-	if (c >= 0 && i <= 127)
-		return (1);
-	return (0);
+	while ((*(src + i)) != '\0')
+	{
+		dest
+	}
 }

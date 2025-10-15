@@ -6,15 +6,15 @@
 /*   By: davidos- <davidos-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 11:39:52 by davidos-          #+#    #+#             */
-/*   Updated: 2025/10/14 12:15:47 by davidos-         ###   ########.fr       */
+/*   Updated: 2025/10/14 22:22:42 by davidos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_libft.h"
+#include "libft.h"
 
 void	*ft_memset(char *s, int c, int n)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (i < n)

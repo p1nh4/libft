@@ -6,11 +6,11 @@
 /*   By: davidos- <davidos-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 13:56:19 by davidos-          #+#    #+#             */
-/*   Updated: 2025/10/14 14:18:29 by davidos-         ###   ########.fr       */
+/*   Updated: 2025/10/14 22:03:06 by davidos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_libft.h"
+#include "libft.h"
 
 void	ft_bzero(char *s, int n)
 {

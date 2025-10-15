@@ -6,13 +6,13 @@
 /*   By: davidos- <davidos-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 14:42:37 by davidos-          #+#    #+#             */
-/*   Updated: 2025/10/14 16:16:52 by davidos-         ###   ########.fr       */
+/*   Updated: 2025/10/14 22:22:20 by davidos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_libft.h"
+#include "libft.h"
 
-void *ft_memcpy(char *dest, const char *src, int n)
+void	*ft_memcpy(char *dest, const char *src, int n)
 {
 	int	i;
 

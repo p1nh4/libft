@@ -6,7 +6,7 @@
 #    By: davidos- <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/13 14:33:49 by davidos-          #+#    #+#              #
-#    Updated: 2025/10/13 14:49:30 by davidos-         ###   ########.fr        #
+#    Updated: 2025/10/15 09:16:00 by davidos-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,3 +15,10 @@ Dividir a pasta de testes
 O Linker deve ter todas as funcoes que chama para o compilador
 ex: cc -Wall -Wextra -Werror teste_isalnum.c ft_isalnum.c ft_isalpha.c ft_isdigit.c main.c
 
+
+Makefile: 
+https://www.youtube.com/watch?v=0XlVyZAfQEM
+https://www.youtube.com/watch?v=GCpHPZEWtiE
+https://www.youtube.com/watch?v=G5dNorAoeCM
+https://www.youtube.com/watch?v=ewU2PVCTMiw&t=343s
+https://www.youtube.com/watch?v=2kbQN74EU8Q

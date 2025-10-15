@@ -6,11 +6,11 @@
 /*   By: davidos- <davidos-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 17:40:48 by davidos-          #+#    #+#             */
-/*   Updated: 2025/10/14 18:57:06 by davidos-         ###   ########.fr       */
+/*   Updated: 2025/10/14 22:22:33 by davidos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "ft_libft.h"
+/*
+#include "libft.h"
 
 void	*ft_memmove(char *dest, const char *src, int n)
 {
@@ -21,4 +21,4 @@ void	*ft_memmove(char *dest, const char *src, int n)
 	{
 		dest
 	}
-}
+}*/

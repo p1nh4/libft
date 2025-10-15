@@ -6,15 +6,15 @@
 /*   By: davidos- <davidos-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 10:28:21 by davidos-          #+#    #+#             */
-/*   Updated: 2025/10/14 10:33:16 by davidos-         ###   ########.fr       */
+/*   Updated: 2025/10/14 22:22:10 by davidos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_libft.h"
+#include "libft.h"
 
 int	ft_isprint(int c)
 {
-	if(c > 31 && c < 128)
+	if (c > 31 && c < 128)
 		return (1);
 	return (0);
 }

@@ -6,18 +6,15 @@
 /*   By: davidos- <davidos-@student.42porto.co      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/10 16:03:58 by davidos-          #+#    #+#             */
-/*   Updated: 2025/10/10 19:52:18 by davidos-         ###   ########.fr       */
+/*   Updated: 2025/10/14 22:45:54 by davidos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_libft.h"
+#include "libft.h"
 
 int	ft_isalpha(int c)
 {
-	int	i;
-
-	i = 0;
 	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
-		return (1);
+		return (c);
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: davidos- <davidos-@student.42porto.co      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/10 18:49:52 by davidos-          #+#    #+#             */
-/*   Updated: 2025/10/14 22:21:58 by davidos-         ###   ########.fr       */
+/*   Updated: 2025/10/15 18:24:46 by davidos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,6 @@
 int	ft_isdigit(int c)
 {
 	if (c < '0' || c > '9')
-		return (1);
-	return (0);
+		return (0);
+	return (c);
 }

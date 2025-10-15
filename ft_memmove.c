@@ -6,10 +6,10 @@
 /*   By: davidos- <davidos-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 17:40:48 by davidos-          #+#    #+#             */
-/*   Updated: 2025/10/14 22:22:33 by davidos-         ###   ########.fr       */
+/*   Updated: 2025/10/15 13:24:14 by davidos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-/*
+
 #include "libft.h"
 
 void	*ft_memmove(char *dest, const char *src, int n)
@@ -17,8 +17,9 @@ void	*ft_memmove(char *dest, const char *src, int n)
 	int	i;
 	
 	i = 0;
+	if ()
 	while ((*(src + i)) != '\0')
 	{
 		dest
 	}
-}*/
+}

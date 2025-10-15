@@ -6,11 +6,16 @@
 #    By: davidos- <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/13 14:33:49 by davidos-          #+#    #+#              #
-#    Updated: 2025/10/15 09:16:00 by davidos-         ###   ########.fr        #
+#    Updated: 2025/10/15 17:45:31 by davidos-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 Dividir a pasta de testes 
+no meu libft no github colocar um makefile para compilar as pastas de testes e funcoes
+assim modifico o projeto 
+
+******************************************************
+
 
 O Linker deve ter todas as funcoes que chama para o compilador
 ex: cc -Wall -Wextra -Werror teste_isalnum.c ft_isalnum.c ft_isalpha.c ft_isdigit.c main.c
@@ -18,7 +23,48 @@ ex: cc -Wall -Wextra -Werror teste_isalnum.c ft_isalnum.c ft_isalpha.c ft_isdigi
 
 Makefile: 
 https://www.youtube.com/watch?v=0XlVyZAfQEM
-https://www.youtube.com/watch?v=GCpHPZEWtiE
+https://www.youtube.com/watch?v=a8mPKBxQ9No
 https://www.youtube.com/watch?v=G5dNorAoeCM
-https://www.youtube.com/watch?v=ewU2PVCTMiw&t=343s
 https://www.youtube.com/watch?v=2kbQN74EU8Q
+https://www.youtube.com/watch?v=ewU2PVCTMiw&t=343s
+https://www.youtube.com/watch?v=BD0giwqBbm0&t=421s - 42 
+https://stackoverflow.com/questions/7004702/how-can-i-create-a-makefile-for-c-projects-with-src-obj-and-bin-subdirectories -- wildcard (update V4)
+
+
+GDB:
+https://www.youtube.com/watch?v=mfmXcbiRs0E
+
+******************************************************libft.h references********************************************************
+
+main
+https://stackoverflow.com/questions/38912070/whats-a-good-way-to-unit-test-the-main-function-that-calls-all-the-simple-funct
+
+isaprint
+https://www.geeksforgeeks.org/cpp/isprint-in-c/
+https://web.itu.edu.tr/sgunduz/courses/mikroisl/ascii.html
+
+strlen 
+https://www.geeksforgeeks.org/c/array-of-pointers-to-strings-in-c/
+
+memset 
+man memset linux
+https://www.tutorialspoint.com/c_standard_library/c_function_memset.htm
+https://how.dev/answers/copying-data-using-the-memset-function-in-c
+https://www.youtube.com/watch?v=7uYeH1d-QBU
+
+memcpy
+https://www.tutorialspoint.com/c_standard_library/c_function_memcpy.htm
+https://www.tutorialspoint.com/c_standard_library/c_function_memset.htm
+
+memmove
+
+dst > src ou src > dst ==> compara  address 1002 > 1000 (&s[0] < &s[2])
+destino comeca dps da origem na memoria (sobreposicao)
+sobreposicao : de  ini - fim, sobreescrevemos antes de ler todo conteudo
+https://www.youtube.com/watch?v=s01N_K2VHQs
+https://marmota.medium.com/c-language-making-memmove-def8792bb8d5
+https://miro.medium.com/v2/resize:fit:1200/1*iioML4U3GAF2B-MwphYTQw.png
+https://www.fromdev.com/2023/07/memcpy-vs-memmove-crucial-differences.html
+https://pt.stackoverflow.com/questions/387414/qual-a-diferen%C3%A7a-entre-memmove-e-memcpy
+https://www.geeksforgeeks.org/cpp/memmove-in-cc/
+https://www.geeksforgeeks.org/cpp/write-memcpy/

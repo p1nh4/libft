@@ -6,11 +6,11 @@
 /*   By: davidos- <davidos-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 10:52:36 by davidos-          #+#    #+#             */
-/*   Updated: 2025/10/14 11:18:40 by davidos-         ###   ########.fr       */
+/*   Updated: 2025/10/15 22:23:13 by davidos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_libft.h"
+#include "libft.h"
 #include <stdio.h>
 
 int	teste_strlen(void)

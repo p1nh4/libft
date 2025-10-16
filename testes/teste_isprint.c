@@ -6,11 +6,11 @@
 /*   By: davidos- <davidos-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 10:36:22 by davidos-          #+#    #+#             */
-/*   Updated: 2025/10/14 10:43:38 by davidos-         ###   ########.fr       */
+/*   Updated: 2025/10/15 22:22:04 by davidos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_libft.h"
+#include "libft.h"
 #include <unistd.h>
 
 int	teste_isprint(void)

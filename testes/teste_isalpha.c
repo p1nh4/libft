@@ -6,11 +6,11 @@
 /*   By: davidos- <davidos-@student.42porto.co      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/10 18:06:13 by davidos-          #+#    #+#             */
-/*   Updated: 2025/10/13 19:45:36 by davidos-         ###   ########.fr       */
+/*   Updated: 2025/10/15 22:20:56 by davidos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_libft.h"
+#include "libft.h"
 #include "teste_functions.h"
 #include <unistd.h> 
 

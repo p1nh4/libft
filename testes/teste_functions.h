@@ -6,7 +6,7 @@
 /*   By: davidos- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 20:04:46 by davidos-          #+#    #+#             */
-/*   Updated: 2025/10/14 14:45:15 by davidos-         ###   ########.fr       */
+/*   Updated: 2025/10/15 22:41:58 by davidos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,6 @@ int	teste_strlen(void);
 int	teste_memset(void);
 int	teste_bzero(void);
 int	teste_memcpy(void);
+int	teste_memmove(void);
 
 #endif    

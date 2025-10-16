@@ -6,11 +6,11 @@
 /*   By: davidos- <davidos-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 13:59:21 by davidos-          #+#    #+#             */
-/*   Updated: 2025/10/14 17:18:41 by davidos-         ###   ########.fr       */
+/*   Updated: 2025/10/15 22:20:16 by davidos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_libft.h"
+#include "libft.h"
 #include <stdio.h>
 #include <unistd.h> 
 

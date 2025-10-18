@@ -6,20 +6,26 @@
 /*   By: davidos- <davidos-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 13:56:19 by davidos-          #+#    #+#             */
-/*   Updated: 2025/10/15 22:17:07 by davidos-         ###   ########.fr       */
+/*   Updated: 2025/10/16 22:20:33 by davidos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(char *s, int n)
+void	ft_bzero(void *s, size_t n)
 {
-	int	i;
-
-	i = 0;
-	while (i < n)
+	char *p;
+	
+	p = (char *) s;
+	while (n > 0)
 	{
-		s[i] = 0;
-		i++;
+		*(p++) = '\0';
+		n--;
 	}
 }
+
+/*
+void	ft_zero(void *s, size_t n)
+{
+	ft_memset(s, '\0', n);
+}*/

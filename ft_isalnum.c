@@ -6,7 +6,7 @@
 /*   By: davidos- <davidos-@student.42porto.co      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/10 19:58:54 by davidos-          #+#    #+#             */
-/*   Updated: 2025/10/15 22:17:13 by davidos-         ###   ########.fr       */
+/*   Updated: 2025/10/16 19:08:53 by davidos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_isalnum(int c)
 {
-	if (ft_isdigit(c) == 0 || ft_isalpha(c) == 0)
-		return (0);
-	return (1);
+	if ((ft_isdigit(c)) || (ft_isalpha(c)))
+		return (c);
+	return (0);
 }

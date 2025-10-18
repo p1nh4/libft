@@ -6,13 +6,13 @@
 /*   By: davidos- <davidos-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 17:40:48 by davidos-          #+#    #+#             */
-/*   Updated: 2025/10/15 22:51:09 by davidos-         ###   ########.fr       */
+/*   Updated: 2025/10/16 19:37:09 by davidos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-void	*ft_memmove(char *dest, const char *src, int n)
+/*
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	int	i;
 	
@@ -30,4 +30,4 @@ void	*ft_memmove(char *dest, const char *src, int n)
 		}
 	}
 	return (0);
-} 
+} */

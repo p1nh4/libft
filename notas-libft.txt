@@ -6,7 +6,7 @@
 #    By: davidos- <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/13 14:33:49 by davidos-          #+#    #+#              #
-#    Updated: 2025/10/15 17:45:31 by davidos-         ###   ########.fr        #
+#    Updated: 2025/10/16 22:24:19 by davidos-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,6 +20,14 @@ assim modifico o projeto
 O Linker deve ter todas as funcoes que chama para o compilador
 ex: cc -Wall -Wextra -Werror teste_isalnum.c ft_isalnum.c ft_isalpha.c ft_isdigit.c main.c
 
+Vim: 
+
+comando substituicao: :%s/palavra_antiga/palavra_nova/g
+% → Aplica a substituição em todo o arquivo.
+s → Comando de substituição.
+/palavra_antiga/ → Palavra que você quer substituir.
+/palavra_nova/ → Nova palavra.
+/g → Substitui todas as ocorrências na linha (sem o g, só substitui a primeira ocorrência de cada linha).
 
 Makefile: 
 https://www.youtube.com/watch?v=0XlVyZAfQEM
@@ -47,12 +55,24 @@ strlen
 https://www.geeksforgeeks.org/c/array-of-pointers-to-strings-in-c/
 
 memset 
+https://www.geeksforgeeks.org/c/memset-c-example/
+https://aticleworld.com/memset-in-c/
+https://stackoverflow.com/questions/18851835/create-my-own-memset-function-in-c
 man memset linux
 https://www.tutorialspoint.com/c_standard_library/c_function_memset.htm
 https://how.dev/answers/copying-data-using-the-memset-function-in-c
 https://www.youtube.com/watch?v=7uYeH1d-QBU
 
+bzero 
+https://stackoverflow.com/questions/29182966/do-you-have-a-simple-bzero-example
+https://codebrowser.dev/glibc/glibc/string/explicit_bzero.c.html
+
 memcpy
+https://www.youtube.com/watch?v=PThPm24wGEo - min 9
+https://aticleworld.com/memcpy-vs-memmove/
+https://aticleworld.com/how-to-use-memcpy-and-how-to-write-your-own-memcpy/
+https://aticleworld.com/memcpy-vs-memmove/
+
 https://www.tutorialspoint.com/c_standard_library/c_function_memcpy.htm
 https://www.tutorialspoint.com/c_standard_library/c_function_memset.htm
 

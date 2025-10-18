@@ -6,7 +6,7 @@
 #    By: davidos- <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/13 14:33:49 by davidos-          #+#    #+#              #
-#    Updated: 2025/10/16 22:24:19 by davidos-         ###   ########.fr        #
+#    Updated: 2025/10/18 18:08:43 by davidos-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,6 +42,9 @@ https://stackoverflow.com/questions/7004702/how-can-i-create-a-makefile-for-c-pr
 GDB:
 https://www.youtube.com/watch?v=mfmXcbiRs0E
 
+ptr increment 
+https://stackoverflow.com/questions/18481740/pointer-expressions-ptr-ptr-and-ptr
+
 ******************************************************libft.h references********************************************************
 
 main
@@ -71,7 +74,6 @@ memcpy
 https://www.youtube.com/watch?v=PThPm24wGEo - min 9
 https://aticleworld.com/memcpy-vs-memmove/
 https://aticleworld.com/how-to-use-memcpy-and-how-to-write-your-own-memcpy/
-https://aticleworld.com/memcpy-vs-memmove/
 
 https://www.tutorialspoint.com/c_standard_library/c_function_memcpy.htm
 https://www.tutorialspoint.com/c_standard_library/c_function_memset.htm
@@ -88,3 +90,22 @@ https://www.fromdev.com/2023/07/memcpy-vs-memmove-crucial-differences.html
 https://pt.stackoverflow.com/questions/387414/qual-a-diferen%C3%A7a-entre-memmove-e-memcpy
 https://www.geeksforgeeks.org/cpp/memmove-in-cc/
 https://www.geeksforgeeks.org/cpp/write-memcpy/
+https://aticleworld.com/memcpy-vs-memmove/
+https://stackoverflow.com/questions/65804091/implementing-memmove-without-copying-the-source-data
+https://marmota.medium.com/c-language-making-memmove-def8792bb8d5
+https://codereview.stackexchange.com/questions/174935/implementation-of-memmove
+
+strlcpy
+ https://lwn.net/Articles/905777/
+ https://c-for-dummies.com/blog/?p=3873
+ https://stackoverflow.com/questions/71554108/implement-of-original-strlcpy-function-on-libc
+
+ strlcat 
+ ex: 
+ https://c-for-dummies.com/blog/?p=3896
+ https://aitorfi.github.io/knowledge-base/software-development/c-programming-language/string/strlcat/
+
+ im
+ https://medium.com/@BaldrTheKing/how-to-build-your-own-strlcat-function-928676489144
+ https://c-for-dummies.com/blog/?p=3908
+

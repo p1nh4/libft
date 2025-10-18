@@ -6,7 +6,7 @@
 /*   By: davidos- <davidos-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 21:53:24 by davidos-          #+#    #+#             */
-/*   Updated: 2025/10/15 22:47:28 by davidos-         ###   ########.fr       */
+/*   Updated: 2025/10/18 14:03:13 by davidos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int teste_memmove(void)
     printf("Original string :%s\n ", str);
     
     // when overlap happens then it just ignore it
-    ft_memcpy(first + 8, first, 10);
+    ft_memmove(first + 8, first, 10);
     printf("memcpy overlap : %s\n ", str);
 
     // when overlap it start from first position

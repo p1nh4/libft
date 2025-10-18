@@ -1,38 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: davidos- <davidos-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/14 17:40:48 by davidos-          #+#    #+#             */
-/*   Updated: 2025/10/18 15:55:56 by davidos-         ###   ########.fr       */
+/*   Created: 2025/10/18 16:21:34 by davidos-          #+#    #+#             */
+/*   Updated: 2025/10/18 17:15:43 by davidos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	unsigned char	*p_dest;
-	const unsigned char	*p_src;
+	size_t	len;
+	size_t	s_len;
 
-	if (!dest && !src)
-		return ((void *)0);
-	if (n == 0 && dest == src)
-		return (dest);
-	p_dest = (unsigned char *)dest;
-	p_src = (const unsigned char *)src;
-	if (p_src > p_dest)
-	{
-		ft_memcpy(dest, src, n);
-	}
+	s_len = ft_strlen(src);
+	if(s_len > size)
+		len = size - 1;
 	else
+		len = s_len;
+	if(size)
 	{
-		while (n--)
-		{
-			p_dest[n] = p_src[n];
-		} 
+		ft_memcpy(dst, src, len);
+		dst[len] = '\0';
 	}
-	return (dest);
+	return (s_len);
 } 

@@ -6,7 +6,7 @@
 /*   By: davidos- <davidos-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 13:56:19 by davidos-          #+#    #+#             */
-/*   Updated: 2025/10/18 15:44:14 by davidos-         ###   ########.fr       */
+/*   Updated: 2025/10/18 21:47:14 by davidos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	char *p;
-	
+	char	*p;
+
 	p = (char *) s;
 	while (n > 0)
 	{
@@ -23,7 +23,6 @@ void	ft_bzero(void *s, size_t n)
 		n--;
 	}
 }
-
 /*
 void	ft_zero(void *s, size_t n)
 {

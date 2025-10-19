@@ -6,7 +6,7 @@
 /*   By: davidos- <davidos-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 17:40:48 by davidos-          #+#    #+#             */
-/*   Updated: 2025/10/18 15:55:56 by davidos-         ###   ########.fr       */
+/*   Updated: 2025/10/18 21:44:05 by davidos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	unsigned char	*p_dest;
+	unsigned char		*p_dest;
 	const unsigned char	*p_src;
 
 	if (!dest && !src)
@@ -32,7 +32,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 		while (n--)
 		{
 			p_dest[n] = p_src[n];
-		} 
+		}
 	}
 	return (dest);
-} 
+}

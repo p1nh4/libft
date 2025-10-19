@@ -6,7 +6,7 @@
 /*   By: davidos- <davidos-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 11:39:52 by davidos-          #+#    #+#             */
-/*   Updated: 2025/10/16 21:26:20 by davidos-         ###   ########.fr       */
+/*   Updated: 2025/10/18 21:45:18 by davidos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	*ft_memset(void *s, int c, size_t n)
 {
 	unsigned char	*p;
-	
+
 	p = (unsigned char *) s;
 	while (n > 0)
 	{

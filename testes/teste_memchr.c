@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   teste_memchr.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: davidos- <davidos-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/19 23:03:51 by davidos-          #+#    #+#             */
-/*   Updated: 2025/10/20 18:56:04 by davidos-         ###   ########.fr       */
+/*   Created: 2025/10/20 22:11:30 by davidos-          #+#    #+#             */
+/*   Updated: 2025/10/20 22:11:50 by davidos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-int	ft_isalpha(int c)
+#include <stdio.h>
+#include <string.h>
+int main () 
 {
-	unsigned char	ch;
-
-	ch = (unsigned char)c;
-	if ((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z'))
-		return (ch);
-	return (0);
+   const char str[] = "Tutorialspoint.tutorialspoint.com";
+   const char ch = '.';
+   char *ret;
+   ret = memchr(str, ch, strlen(str));
+   printf("String after |%c| is - |%s|\n", ch, ret);
+   return(0);
 }

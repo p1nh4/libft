@@ -1,23 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: davidos- <davidos-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/19 23:03:51 by davidos-          #+#    #+#             */
-/*   Updated: 2025/10/20 18:56:04 by davidos-         ###   ########.fr       */
+/*   Created: 2025/10/20 22:25:57 by davidos-          #+#    #+#             */
+/*   Updated: 2025/10/20 22:28:43 by davidos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalpha(int c)
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	unsigned char	ch;
 
-	ch = (unsigned char)c;
-	if ((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z'))
-		return (ch);
-	return (0);
 }

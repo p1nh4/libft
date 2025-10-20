@@ -1,23 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   teste_tolower.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: davidos- <davidos-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/19 23:03:51 by davidos-          #+#    #+#             */
-/*   Updated: 2025/10/20 18:56:04 by davidos-         ###   ########.fr       */
+/*   Created: 2025/10/20 19:12:41 by davidos-          #+#    #+#             */
+/*   Updated: 2025/10/20 19:12:44 by davidos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdio.h>
+#include <ctype.h>
 
-int	ft_isalpha(int c)
-{
-	unsigned char	ch;
+int main() {
 
-	ch = (unsigned char)c;
-	if ((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z'))
-		return (ch);
-	return (0);
+    // Converting 'A' to 'a'
+    printf("%c", ft_tolower('A'));
+    return 0;
 }

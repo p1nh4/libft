@@ -1,23 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   teste_memcmp.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: davidos- <davidos-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/19 23:03:51 by davidos-          #+#    #+#             */
-/*   Updated: 2025/10/20 18:56:04 by davidos-         ###   ########.fr       */
+/*   Created: 2025/10/20 22:22:21 by davidos-          #+#    #+#             */
+/*   Updated: 2025/10/20 22:22:25 by davidos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 
-int	ft_isalpha(int c)
+int main () 
 {
-	unsigned char	ch;
+   char str1[15];
+   char str2[15];
+   int ret;
 
-	ch = (unsigned char)c;
-	if ((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z'))
-		return (ch);
-	return (0);
+   memcpy(str1, "abcdef", 6);
+   memcpy(str2, "ABCDEF", 6);
+
+   ret = ft_memcmp(str1, str2, 5);
+
+   if(ret > 0) {
+      printf("str2 is less than str1");
+   } 
+   else if(ret < 0) {
+      printf("str1 is less than str2");
+   } 
+   else {
+      printf("str1 is equal to str2");
+   }
+   return(0);
 }

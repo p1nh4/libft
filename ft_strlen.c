@@ -6,13 +6,13 @@
 /*   By: davidos- <davidos-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 10:47:04 by davidos-          #+#    #+#             */
-/*   Updated: 2025/10/16 19:40:51 by davidos-         ###   ########.fr       */
+/*   Updated: 2025/10/21 22:40:04 by davidos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlen(const char *s)
+size_t	ft_strlen(const char *s)
 {
 	size_t	i;
 

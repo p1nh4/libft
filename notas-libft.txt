@@ -1,0 +1,111 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    notas-libft.txt                                    :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: davidos- <marvin@42.fr>                    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2025/10/13 14:33:49 by davidos-          #+#    #+#              #
+#    Updated: 2025/10/18 18:08:43 by davidos-         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+Dividir a pasta de testes 
+no meu libft no github colocar um makefile para compilar as pastas de testes e funcoes
+assim modifico o projeto 
+
+******************************************************
+
+
+O Linker deve ter todas as funcoes que chama para o compilador
+ex: cc -Wall -Wextra -Werror teste_isalnum.c ft_isalnum.c ft_isalpha.c ft_isdigit.c main.c
+
+Vim: 
+
+comando substituicao: :%s/palavra_antiga/palavra_nova/g
+% → Aplica a substituição em todo o arquivo.
+s → Comando de substituição.
+/palavra_antiga/ → Palavra que você quer substituir.
+/palavra_nova/ → Nova palavra.
+/g → Substitui todas as ocorrências na linha (sem o g, só substitui a primeira ocorrência de cada linha).
+
+Makefile: 
+https://www.youtube.com/watch?v=0XlVyZAfQEM
+https://www.youtube.com/watch?v=a8mPKBxQ9No
+https://www.youtube.com/watch?v=G5dNorAoeCM
+https://www.youtube.com/watch?v=2kbQN74EU8Q
+https://www.youtube.com/watch?v=ewU2PVCTMiw&t=343s
+https://www.youtube.com/watch?v=BD0giwqBbm0&t=421s - 42 
+https://stackoverflow.com/questions/7004702/how-can-i-create-a-makefile-for-c-projects-with-src-obj-and-bin-subdirectories -- wildcard (update V4)
+
+
+GDB:
+https://www.youtube.com/watch?v=mfmXcbiRs0E
+
+ptr increment 
+https://stackoverflow.com/questions/18481740/pointer-expressions-ptr-ptr-and-ptr
+
+******************************************************libft.h references********************************************************
+
+main
+https://stackoverflow.com/questions/38912070/whats-a-good-way-to-unit-test-the-main-function-that-calls-all-the-simple-funct
+
+isaprint
+https://www.geeksforgeeks.org/cpp/isprint-in-c/
+https://web.itu.edu.tr/sgunduz/courses/mikroisl/ascii.html
+
+strlen 
+https://www.geeksforgeeks.org/c/array-of-pointers-to-strings-in-c/
+
+memset 
+https://www.geeksforgeeks.org/c/memset-c-example/
+https://aticleworld.com/memset-in-c/
+https://stackoverflow.com/questions/18851835/create-my-own-memset-function-in-c
+man memset linux
+https://www.tutorialspoint.com/c_standard_library/c_function_memset.htm
+https://how.dev/answers/copying-data-using-the-memset-function-in-c
+https://www.youtube.com/watch?v=7uYeH1d-QBU
+
+bzero 
+https://stackoverflow.com/questions/29182966/do-you-have-a-simple-bzero-example
+https://codebrowser.dev/glibc/glibc/string/explicit_bzero.c.html
+
+memcpy
+https://www.youtube.com/watch?v=PThPm24wGEo - min 9
+https://aticleworld.com/memcpy-vs-memmove/
+https://aticleworld.com/how-to-use-memcpy-and-how-to-write-your-own-memcpy/
+
+https://www.tutorialspoint.com/c_standard_library/c_function_memcpy.htm
+https://www.tutorialspoint.com/c_standard_library/c_function_memset.htm
+
+memmove
+
+dst > src ou src > dst ==> compara  address 1002 > 1000 (&s[0] < &s[2])
+destino comeca dps da origem na memoria (sobreposicao)
+sobreposicao : de  ini - fim, sobreescrevemos antes de ler todo conteudo
+https://www.youtube.com/watch?v=s01N_K2VHQs
+https://marmota.medium.com/c-language-making-memmove-def8792bb8d5
+https://miro.medium.com/v2/resize:fit:1200/1*iioML4U3GAF2B-MwphYTQw.png
+https://www.fromdev.com/2023/07/memcpy-vs-memmove-crucial-differences.html
+https://pt.stackoverflow.com/questions/387414/qual-a-diferen%C3%A7a-entre-memmove-e-memcpy
+https://www.geeksforgeeks.org/cpp/memmove-in-cc/
+https://www.geeksforgeeks.org/cpp/write-memcpy/
+https://aticleworld.com/memcpy-vs-memmove/
+https://stackoverflow.com/questions/65804091/implementing-memmove-without-copying-the-source-data
+https://marmota.medium.com/c-language-making-memmove-def8792bb8d5
+https://codereview.stackexchange.com/questions/174935/implementation-of-memmove
+
+strlcpy
+ https://lwn.net/Articles/905777/
+ https://c-for-dummies.com/blog/?p=3873
+ https://stackoverflow.com/questions/71554108/implement-of-original-strlcpy-function-on-libc
+
+ strlcat 
+ ex: 
+ https://c-for-dummies.com/blog/?p=3896
+ https://aitorfi.github.io/knowledge-base/software-development/c-programming-language/string/strlcat/
+
+ im
+ https://medium.com/@BaldrTheKing/how-to-build-your-own-strlcat-function-928676489144
+ https://c-for-dummies.com/blog/?p=3908
+

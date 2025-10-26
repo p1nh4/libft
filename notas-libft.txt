@@ -6,7 +6,7 @@
 #    By: davidos- <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/13 14:33:49 by davidos-          #+#    #+#              #
-#    Updated: 2025/10/22 23:53:51 by davidos-         ###   ########.fr        #
+#    Updated: 2025/10/26 22:58:33 by davidos-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -104,12 +104,31 @@ strlcpy
  ex: 
  https://c-for-dummies.com/blog/?p=3896
  https://aitorfi.github.io/knowledge-base/software-development/c-programming-language/string/strlcat/
-
- im
  https://medium.com/@BaldrTheKing/how-to-build-your-own-strlcat-function-928676489144
  https://c-for-dummies.com/blog/?p=3908
 
-strnstr
+
+strchr:
+https://stackoverflow.com/questions/41863674/how-to-write-your-own-strchr-in-c-using-pointers
+https://www.geeksforgeeks.org/c/strchr-in-c/
+https://learn.microsoft.com/pt-br/cpp/c-runtime-library/reference/strchr-wcschr-mbschr-mbschr-l?view=msvc-170
+
+strrchr
+https://www.tutorialspoint.com/c_standard_library/c_function_strrchr.htm
+
+strncmp
+https://beginnersbook.com/2017/11/c-strncmp-function/
+https://stackoverflow.com/questions/32560167/strncmp-implementation
+https://stackoverflow.com/questions/77290937/why-should-i-use-unsigned-char
+
+memchr
+https://stackoverflow.com/questions/525123/how-does-memchr-work-under-the-hood
+https://www.tutorialspoint.com/c_standard_library/c_function_memchr.htm
+
+memcmp
+https://www.tutorialspoint.com/c_standard_library/c_function_memcmp.htm
+
+strnstr 
 https://stackoverflow.com/questions/23999797/implementing-strnstr
 https://git.hexanyn.fr/42/malloc/-/blob/master/libft/ft_strnstr.c?ref_type=heads
 https://github.com/igorvazf/libft/blob/main/ft_strnstr.c
@@ -125,3 +144,18 @@ calloc
 https://danluu.com/malloc-tutorial
 https://stackoverflow.com/questions/4083916/two-arguments-to-calloc
 https://drj11.wordpress.com/2008/06/04/calloc-when-multiply-overflows/
+https://www.geeksforgeeks.org/c/dynamic-memory-allocation-in-c-using-malloc-calloc-free-and-realloc/
+
+strdup: 
+https://aticleworld.com/strdup-in-c/
+https://stackoverflow.com/questions/37132549/implementation-of-strdup-in-c-programming
+https://www.geeksforgeeks.org/cpp/strdup-strdndup-functions-c/
+
+substring 
+https://stackoverflow.com/questions/2880436/is-there-an-elegant-industry-standard-way-of-implementing-substr-in-
+
+strjoin
+https://stackoverflow.com/questions/5262128/what-is-a-safe-way-to-join-strings-in-c
+
+strtrim
+https://jraleman.medium.com/implementation-of-the-c-function-strtrim-1a1ea0c60b38

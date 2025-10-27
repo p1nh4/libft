@@ -6,7 +6,7 @@
 #    By: davidos- <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/13 14:33:49 by davidos-          #+#    #+#              #
-#    Updated: 2025/10/26 22:58:33 by davidos-         ###   ########.fr        #
+#    Updated: 2025/10/27 20:28:42 by davidos-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -159,3 +159,6 @@ https://stackoverflow.com/questions/5262128/what-is-a-safe-way-to-join-strings-i
 
 strtrim
 https://jraleman.medium.com/implementation-of-the-c-function-strtrim-1a1ea0c60b38
+
+split
+count-words - https://www.geeksforgeeks.org/dsa/program-to-count-the-number-of-words-in-a-sentence/

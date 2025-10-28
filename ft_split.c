@@ -6,47 +6,46 @@
 /*   By: davidos- <davidos-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 19:04:54 by davidos-          #+#    #+#             */
-/*   Updated: 2025/10/27 23:47:31 by davidos-         ###   ########.fr       */
+/*   Updated: 2025/10/28 22:54:08 by davidos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+char		*ft_neword(const char *s, char c);
 void		ft_free(char **tokens);
+void		ft_fill_tab(const char *s, char c, char **ar);
 size_t		ft_count_words(char const *s, char c);
-size_t		ft_word_len(const char *s, char c);
-char		*ft_new_word(const char *s, size_t len);
-const char	*ft_next_word(const char *s, char c);
 
 char	**ft_split(char const *s, char c)
 {
-	char const	*w_start;
-	char		**tokens;
-	size_t		d_words;
-	size_t		w_len;
+	char	**arr;
+	size_t	count;
 
-	d_words = ft_count_words(s, c);
-	tokens = malloc((d_words + 1) * sizeof(char *));
-	if (!tokens)
+	if (!s)
 		return ((void *)0);
-	while (*s)
-	{
-		s = ft_next_word(s, c);
-		if (*s)
-			break;
-		w_start = s;
-		w_len = ft_word_len(s, c);
-		*tokens = ft_new_word(s, w_len);
-		if (!tokens)
-		{
-			ft_free(tokens);
-			return ((void *)0);
-		}
-		s += w_len;
-		tokens++;
-	}
-	*tokens = ((void *)0);
-	return (tokens);
+	count = ft_count_words(s, c);
+	arr = malloc((count + 1) * sizeof(char *));
+	if (!arr)
+		return ((void *)0);
+	ft_fill_tab(s, c, arr);
+	return (arr);
+}
+
+char	*ft_neword(const char *s, char c)
+{
+	size_t	len;
+	char	*word;
+
+	len = 0;
+	while (s[len] && s[len] != c)
+		len++;
+	word = malloc((len + 1) * sizeof(char));
+	if (!word)
+		return ((void *)0);
+	ft_memcpy(word, s, len);
+	word[len] = '\0';
+	return (word);
 }
 
 void	ft_free(char **tokens)
@@ -55,53 +54,42 @@ void	ft_free(char **tokens)
 
 	tmp = tokens;
 	while (*tmp)
-	{
-		free(*tmp);
-		tmp++;
-	}
+		free(*tmp++);
 	free(tokens);
+}
+
+void	ft_fill_tab(const char *s, char c, char **arr)
+{
+	while (*s)
+	{
+		while (*s == c)
+			s++;
+		if (!*s)
+			break ;
+		*arr = ft_neword(s, c);
+		if (!*arr)
+			return (ft_free(arr));
+		while (*s && *s != c)
+			s++;
+		arr++;
+	}
+	*arr = ((void *)0);
 }
 
 size_t	ft_count_words(char const *s, char c)
 {
-	size_t		delimiter;
-	const char	*w_start;
+	size_t	count;
 
-	w_start = s;
-	delimiter = 0;
+	count = 0;
 	while (*s)
 	{
-		if (*s != c && (s == w_start || *(s - 1) == c))
-			delimiter++;
-		s++;
+		while (*s == c)
+			s++;
+		if (!*s)
+			break ;
+		count++;
+		while (*s && *s != c)
+			s++;
 	}
-	return (delimiter);
-}
-
-size_t	ft_word_len(const char *s, char c)
-{
-	size_t	w_len;
-
-	w_len = 0;
-	while (s[w_len] && s[w_len] != c)
-		w_len++;
-	return (w_len);
-}
-
-char	*ft_new_word(const char *s, size_t len)
-{
-	char	*word;
-
-	word = malloc((len + 1) * sizeof(char));
-	if (!word)
-		return ((void *)0);
-	ft_strlcpy(word, s, (len + 1));
-	return (word);
-}
-
-const char	*ft_next_word(const char *s, char c)
-{
-	while (*s == c)
-		s++;
-	return (s);
+	return (count);
 }

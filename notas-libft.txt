@@ -6,7 +6,7 @@
 #    By: davidos- <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/13 14:33:49 by davidos-          #+#    #+#              #
-#    Updated: 2025/10/27 20:28:42 by davidos-         ###   ########.fr        #
+#    Updated: 2025/10/29 22:43:08 by davidos-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -162,3 +162,10 @@ https://jraleman.medium.com/implementation-of-the-c-function-strtrim-1a1ea0c60b3
 
 split
 count-words - https://www.geeksforgeeks.org/dsa/program-to-count-the-number-of-words-in-a-sentence/
+
+itoa
+https://stackoverflow.com/questions/39929982/itoa-c-implementation-int-min-underflow -- implementação itoa
+https://www.geeksforgeeks.org/c/how-to-convert-an-integer-to-a-string-in-c/ -- converter cada caracter int a string 
+
+strmapi 
+https://jraleman.medium.com/c-programming-language-passing-a-function-as-a-parameter-90d52fe842ea

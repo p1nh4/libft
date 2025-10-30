@@ -6,7 +6,7 @@
 #    By: davidos- <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/13 14:33:49 by davidos-          #+#    #+#              #
-#    Updated: 2025/10/29 22:43:08 by davidos-         ###   ########.fr        #
+#    Updated: 2025/10/30 23:00:24 by davidos-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -169,3 +169,16 @@ https://www.geeksforgeeks.org/c/how-to-convert-an-integer-to-a-string-in-c/ -- c
 
 strmapi 
 https://jraleman.medium.com/c-programming-language-passing-a-function-as-a-parameter-90d52fe842ea
+
+putchar_fd
+https://stackoverflow.com/questions/52009481/how-do-i-create-a-file-descriptor-backed-by-a-simple-char-array
+https://stackoverflow.com/questions/68039770/is-it-possible-to-read-and-write-with-the-same-file-descriptor-in-c
+https://42-cursus.gitbook.io/guide/useful-tools/file-descriptors-fd
+
+putstr_fd
+https://michael.stapelberg.ch/posts/2013-01-19-c_write_pattern/
+https://stackoverflow.com/questions/69756663/how-to-write-formatted-string-directly-into-file-descriptor
+
+putnbr_fd
+https://stackoverflow.com/questions/25589830/c-create-a-function-to-diplay-number-just-with-write-function
+https://stackoverflow.com/questions/74267019/how-to-use-write-system-call-to-write-integer-float-to-a-file-descriptor

@@ -1,7 +1,7 @@
 NAME := libft.a
 CC := cc
-C_FLAGS := -Wall -Wextra -Werror 
-AR := ar 
+C_FLAGS := -Wall -Wextra -Werror
+AR := ar
 AR_FLAGS := -rcs
 INCLUDES := libft.h
 SRC := $(wildcard *.c)
@@ -13,15 +13,15 @@ all : $(NAME)
 $(NAME) : $(OBJ)
 	$(AR) $(AR_FLAGS) $@ $^
 
-%.o : %.c $(INCLUDE)
+%.o : %.c $(INCLUDES)
 	$(CC) $(C_FLAGS) -c -o $@ $<
 
 clean : 
 	$(RM) $(OBJ)
 
-fclean : clean 
+fclean : clean
 	$(RM) $(NAME)
 
-re : fclean all 
+re : fclean all
 
-.PHONY: all clean fclean re 
+.PHONY: all clean fclean re

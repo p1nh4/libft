@@ -6,11 +6,11 @@
 /*   By: davidos- <davidos-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 22:52:31 by davidos-          #+#    #+#             */
-/*   Updated: 2025/10/28 22:52:34 by davidos-         ###   ########.fr       */
+/*   Updated: 2025/11/01 12:49:13 by davidos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-i#include <stdio.h>
+#include <stdio.h>
 #include "libft.h"
 
 int main(void)
@@ -51,6 +51,5 @@ int main(void)
         printf("Nenhuma palavra encontrada\n");
     ft_free(res);
 
-    return 0;
+    return (0);
 }
-

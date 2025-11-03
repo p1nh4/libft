@@ -6,7 +6,7 @@
 /*   By: davidos- <davidos-@student.42porto.co      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/10 18:53:31 by davidos-          #+#    #+#             */
-/*   Updated: 2025/10/15 22:21:46 by davidos-         ###   ########.fr       */
+/*   Updated: 2025/11/03 19:43:16 by davidos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,4 +30,24 @@ int	teste_isdigit(void)
 		i++;
 	}
 	return (0);
+}
+
+#include "libft.h"
+#include <unistd.h>
+
+int	teste_isdigit(void)
+{
+    int	i;
+    int	c[] = {'1', -5, 'b', '\0'};
+
+    i = 0;
+    while (i < 4)
+    {
+        if (ft_isdigit(c[i]) != 0)
+            write(1, "isdigit\n", 8);
+        else
+            write(1, "No\n", 3);
+        i++;
+    }
+    return (0);
 }

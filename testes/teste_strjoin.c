@@ -1,42 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   teste_substr.c                                     :+:      :+:    :+:   */
+/*   teste_strjoin.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: davidos- <davidos-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/26 18:05:26 by davidos-          #+#    #+#             */
-/*   Updated: 2025/11/03 19:42:45 by davidos-         ###   ########.fr       */
+/*   Created: 2025/11/03 19:36:58 by davidos-          #+#    #+#             */
+/*   Updated: 2025/11/03 19:37:17 by davidos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "" 
-int main() 
-{
-
-    printf("2 Caracteres: %s\n", ft_substr("hello", 3, 100));
-    printf("Vazia: %s\n", ft_substr("hello", 10, 5));
-    printf("3 Caracteres : %s\n", ft_substr("hello", 1, 3));
-
-    return 0;
-}
+#include "libft.h"
+#include <stdio.h>
 
 int main(void)
 {
+    char *s1 = "Hello ";
+    char *s2 = "World!";
     char *result;
 
-    result = ft_substr("hello", 3, 100);
-    printf("2 Caracteres: %s\n", result);
+    result = ft_strjoin(s1, s2);
+    if (!result)
+    {
+        printf("Erro ao alocar memoria!\n");
+        return (1);
+    }
+    printf("s1: '%s'\n", s1);
+    printf("s2: '%s'\n", s2);
+    printf("Resultado: '%s'\n", result);
+    
     free(result);
-
-    result = ft_substr("hello", 10, 5);
-    printf("Vazia: %s\n", result);
+    
+    // Teste com string vazia
+    result = ft_strjoin("", "test");
+    printf("\nString vazia + 'test': '%s'\n", result);
     free(result);
-
-    result = ft_substr("hello", 1, 3);
-    printf("3 Caracteres: %s\n", result);
-    free(result);
-
+    
     return (0);
 }
-

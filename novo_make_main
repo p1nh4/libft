@@ -1,0 +1,220 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    novo_make_main                                     :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: davidos- <davidos-@student.42porto.com>    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2025/10/15 22:09:24 by davidos-          #+#    #+#              #
+#    Updated: 2025/11/03 00:02:05 by davidos-         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+# Nome da biblioteca
+NAME = libft.a
+
+# Compilador e flags
+CC = cc
+CFLAGS = -Wall -Wextra -Werror
+AR = ar rcs
+RM = rm -f
+
+# Cores para output
+GREEN = \033[0;32m
+RED = \033[0;31m
+BLUE = \033[0;34m
+RESET = \033[0m
+
+# Arquivos fonte (apenas os da libft, não os testes)
+SRCS = ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c \
+       ft_isascii.c ft_isdigit.c ft_isprint.c ft_itoa.c \
+       ft_memchr.c ft_memcmp.c ft_memcpy.c ft_memmove.c ft_memset.c \
+       ft_putchar_fd.c ft_putendl_fd.c ft_putnbr_fd.c ft_putstr_fd.c \
+       ft_split.c ft_strchr.c ft_strdup.c ft_striteri.c ft_strjoin.c \
+       ft_strlcat.c ft_strlcpy.c ft_strlen.c ft_strmapi.c ft_strncmp.c \
+       ft_strnstr.c ft_strrchr.c ft_strtrim.c ft_substr.c \
+       ft_tolower.c ft_toupper.c
+
+# Arquivos objeto
+OBJS = $(SRCS:.c=.o)
+
+# Bonus (se existirem)
+BONUS_SRCS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \
+             ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c \
+             ft_lstmap.c
+
+BONUS_OBJS = $(BONUS_SRCS:.c=.o)
+
+# Diretórios
+MAIN_DIR = main
+TESTES_DIR = testes
+
+# Regra principal
+all: $(NAME)
+
+# Criar a biblioteca
+$(NAME): $(OBJS)
+	@$(AR) $(NAME) $(OBJS)
+	@echo "$(GREEN)✓ libft.a criada com sucesso!$(RESET)"
+
+# Compilar objetos
+%.o: %.c libft.h
+	@$(CC) $(CFLAGS) -c $< -o $@
+	@echo "$(GREEN)✓ Compilado: $<$(RESET)"
+
+# Bonus
+bonus: $(OBJS) $(BONUS_OBJS)
+	@$(AR) $(NAME) $(OBJS) $(BONUS_OBJS)
+	@echo "$(GREEN)✓ libft.a criada com bonus!$(RESET)"
+
+# Limpar objetos
+clean:
+	@$(RM) $(OBJS) $(BONUS_OBJS)
+	@echo "$(RED)✗ Objetos removidos$(RESET)"
+
+# Limpar tudo
+fclean: clean
+	@$(RM) $(NAME)
+	@echo "$(RED)✗ libft.a removida$(RESET)"
+
+# Recompilar
+re: fclean all
+
+# ========== TESTES ==========
+
+# Teste principal (main/main.c)
+test: $(NAME)
+	@echo "$(BLUE)Compilando testes principais...$(RESET)"
+	@$(CC) $(CFLAGS) -o test_main $(MAIN_DIR)/main.c -L. -lft
+	@echo "$(GREEN)Executando testes...$(RESET)"
+	@./test_main
+	@$(RM) test_main
+
+# Teste isalpha
+test_isalpha: $(NAME)
+	@echo "$(BLUE)Testando isalpha...$(RESET)"
+	@$(CC) $(CFLAGS) -o test_isalpha $(TESTES_DIR)/teste_isalpha.c -L. -lft
+	@./test_isalpha
+	@$(RM) test_isalpha
+
+# Teste isdigit
+test_isdigit: $(NAME)
+	@echo "$(BLUE)Testando isdigit...$(RESET)"
+	@$(CC) $(CFLAGS) -o test_isdigit $(TESTES_DIR)/teste_isdigit.c -L. -lft
+	@./test_isdigit
+	@$(RM) test_isdigit
+
+# Teste isalnum
+test_isalnum: $(NAME)
+	@echo "$(BLUE)Testando isalnum...$(RESET)"
+	@$(CC) $(CFLAGS) -o test_isalnum $(TESTES_DIR)/teste_isalnum.c -L. -lft
+	@./test_isalnum
+	@$(RM) test_isalnum
+
+# Teste isascii
+test_isascii: $(NAME)
+	@echo "$(BLUE)Testando isascii...$(RESET)"
+	@$(CC) $(CFLAGS) -o test_isascii $(TESTES_DIR)/teste_isascii.c -L. -lft
+	@./test_isascii
+	@$(RM) test_isascii
+
+# Teste isprint
+test_isprint: $(NAME)
+	@echo "$(BLUE)Testando isprint...$(RESET)"
+	@$(CC) $(CFLAGS) -o test_isprint $(TESTES_DIR)/teste_isprint.c -L. -lft
+	@./test_isprint
+	@$(RM) test_isprint
+
+# Teste strlen
+test_strlen: $(NAME)
+	@echo "$(BLUE)Testando strlen...$(RESET)"
+	@$(CC) $(CFLAGS) -o test_strlen $(TESTES_DIR)/teste_strlen.c -L. -lft
+	@./test_strlen
+	@$(RM) test_strlen
+
+# Teste memset
+test_memset: $(NAME)
+	@echo "$(BLUE)Testando memset...$(RESET)"
+	@$(CC) $(CFLAGS) -o test_memset $(TESTES_DIR)/teste_memset.c -L. -lft
+	@./test_memset
+	@$(RM) test_memset
+
+# Teste bzero
+test_bzero: $(NAME)
+	@echo "$(BLUE)Testando bzero...$(RESET)"
+	@$(CC) $(CFLAGS) -o test_bzero $(TESTES_DIR)/teste_bzero.c -L. -lft
+	@./test_bzero
+	@$(RM) test_bzero
+
+# Teste memcpy
+test_memcpy: $(NAME)
+	@echo "$(BLUE)Testando memcpy...$(RESET)"
+	@$(CC) $(CFLAGS) -o test_memcpy $(TESTES_DIR)/teste_memcpy.c -L. -lft
+	@./test_memcpy
+	@$(RM) test_memcpy
+
+# Teste memmove
+test_memmove: $(NAME)
+	@echo "$(BLUE)Testando memmove...$(RESET)"
+	@$(CC) $(CFLAGS) -o test_memmove $(TESTES_DIR)/teste_memmove.c -L. -lft
+	@./test_memmove
+	@$(RM) test_memmove
+
+# Teste atoi
+test_atoi: $(NAME)
+	@echo "$(BLUE)Testando atoi...$(RESET)"
+	@$(CC) $(CFLAGS) -o test_atoi $(TESTES_DIR)/teste_atoi.c -L. -lft
+	@./test_atoi
+	@$(RM) test_atoi
+
+# Teste calloc
+test_calloc: $(NAME)
+	@echo "$(BLUE)Testando calloc...$(RESET)"
+	@$(CC) $(CFLAGS) -o test_calloc $(TESTES_DIR)/teste_calloc.c -L. -lft
+	@./test_calloc
+	@$(RM) test_calloc
+
+# Teste split
+test_split: $(NAME)
+	@echo "$(BLUE)Testando split...$(RESET)"
+	@$(CC) $(CFLAGS) -o test_split $(TESTES_DIR)/teste_split.c -L. -lft
+	@./test_split
+	@$(RM) test_split
+
+# Teste itoa
+test_itoa: $(NAME)
+	@echo "$(BLUE)Testando itoa...$(RESET)"
+	@$(CC) $(CFLAGS) -o test_itoa $(TESTES_DIR)/teste_itoa.c -L. -lft
+	@./test_itoa
+	@$(RM) test_itoa
+
+# Teste substr
+test_substr: $(NAME)
+	@echo "$(BLUE)Testando substr...$(RESET)"
+	@$(CC) $(CFLAGS) -o test_substr $(TESTES_DIR)/teste_substr.c -L. -lft
+	@./test_substr
+	@$(RM) test_substr
+
+# Teste strtrim
+test_strtrim: $(NAME)
+	@echo "$(BLUE)Testando strtrim...$(RESET)"
+	@$(CC) $(CFLAGS) -o test_strtrim $(TESTES_DIR)/teste_strtrim.c -L. -lft
+	@./test_strtrim
+	@$(RM) test_strtrim
+
+# Executar todos os testes individuais
+test_all: test test_isalpha test_isdigit test_isalnum test_isascii \
+          test_isprint test_strlen test_memset test_bzero test_memcpy \
+          test_memmove test_atoi test_calloc test_split test_itoa \
+          test_substr test_strtrim
+	@echo "$(GREEN)========== TODOS OS TESTES EXECUTADOS ==========$(RESET)"
+
+# Limpar arquivos de teste
+clean_test:
+	@$(RM) test_* a.out
+	@echo "$(RED)✗ Executáveis de teste removidos$(RESET)"
+
+.PHONY: all clean fclean re bonus test test_all clean_test \
+        test_isalpha test_isdigit test_isalnum test_isascii test_isprint \
+        test_strlen test_memset test_bzero test_memcpy test_memmove \
+        test_atoi test_calloc test_split test_itoa test_substr test_strtrim

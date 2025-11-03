@@ -1,0 +1,186 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    novo_main                                          :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: davidos- <davidos-@student.42porto.com>    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2025/11/02 23:57:47 by davidos-          #+#    #+#              #
+#    Updated: 2025/11/03 00:01:48 by davidos-         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: davidos- <davidos-@student.42porto.com>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/11/02 by davidos-                  #+#    #+#             */
+/*   Updated: 2025/11/02 by davidos-                 ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+
+#define GREEN "\033[0;32m"
+#define RED "\033[0;31m"
+#define RESET "\033[0m"
+
+void print_test(char *test_name, int passed)
+{
+    if (passed)
+        printf("%s✓ %s%s\n", GREEN, test_name, RESET);
+    else
+        printf("%s✗ %s FALHOU%s\n", RED, test_name, RESET);
+}
+
+int main(void)
+{
+    printf("\n========== TESTANDO LIBFT ==========\n\n");
+
+    // Teste ft_isalpha
+    print_test("ft_isalpha('a')", ft_isalpha('a') != 0);
+    print_test("ft_isalpha('Z')", ft_isalpha('Z') != 0);
+    print_test("ft_isalpha('5')", ft_isalpha('5') == 0);
+
+    // Teste ft_isdigit
+    print_test("ft_isdigit('5')", ft_isdigit('5') != 0);
+    print_test("ft_isdigit('a')", ft_isdigit('a') == 0);
+
+    // Teste ft_isalnum
+    print_test("ft_isalnum('a')", ft_isalnum('a') != 0);
+    print_test("ft_isalnum('5')", ft_isalnum('5') != 0);
+    print_test("ft_isalnum('+')", ft_isalnum('+') == 0);
+
+    // Teste ft_isascii
+    print_test("ft_isascii(65)", ft_isascii(65) != 0);
+    print_test("ft_isascii(128)", ft_isascii(128) == 0);
+
+    // Teste ft_isprint
+    print_test("ft_isprint(' ')", ft_isprint(' ') != 0);
+    print_test("ft_isprint('a')", ft_isprint('a') != 0);
+    print_test("ft_isprint(5)", ft_isprint(5) == 0);
+
+    // Teste ft_strlen
+    print_test("ft_strlen(\"hello\")", ft_strlen("hello") == 5);
+    print_test("ft_strlen(\"\")", ft_strlen("") == 0);
+
+    // Teste ft_toupper
+    print_test("ft_toupper('a')", ft_toupper('a') == 'A');
+    print_test("ft_toupper('Z')", ft_toupper('Z') == 'Z');
+
+    // Teste ft_tolower
+    print_test("ft_tolower('A')", ft_tolower('A') == 'a');
+    print_test("ft_tolower('z')", ft_tolower('z') == 'z');
+
+    // Teste ft_strchr
+    char *str = "hello";
+    print_test("ft_strchr(\"hello\", 'e')", ft_strchr(str, 'e') == str + 1);
+    print_test("ft_strchr(\"hello\", 'x')", ft_strchr(str, 'x') == NULL);
+
+    // Teste ft_strrchr
+    print_test("ft_strrchr(\"hello\", 'l')", ft_strrchr(str, 'l') == str + 3);
+
+    // Teste ft_strncmp
+    print_test("ft_strncmp(\"abc\", \"abc\", 3)", ft_strncmp("abc", "abc", 3) == 0);
+    print_test("ft_strncmp(\"abc\", \"abd\", 3)", ft_strncmp("abc", "abd", 3) < 0);
+
+    // Teste ft_memset
+    char buf[10];
+    ft_memset(buf, 'A', 5);
+    buf[5] = '\0';
+    print_test("ft_memset", strcmp(buf, "AAAAA") == 0);
+
+    // Teste ft_bzero
+    ft_bzero(buf, 5);
+    int all_zero = 1;
+    for (int i = 0; i < 5; i++)
+        if (buf[i] != 0) all_zero = 0;
+    print_test("ft_bzero", all_zero);
+
+    // Teste ft_memcpy
+    char src[] = "hello";
+    char dst[10];
+    ft_memcpy(dst, src, 6);
+    print_test("ft_memcpy", strcmp(dst, "hello") == 0);
+
+    // Teste ft_memmove
+    char overlap[] = "12345678";
+    ft_memmove(overlap + 2, overlap, 5);
+    print_test("ft_memmove", strncmp(overlap, "121234578", 9) == 0);
+
+    // Teste ft_strlcpy
+    char dest[10];
+    size_t ret = ft_strlcpy(dest, "hello", 10);
+    print_test("ft_strlcpy", ret == 5 && strcmp(dest, "hello") == 0);
+
+    // Teste ft_strlcat
+    strcpy(dest, "hello");
+    ret = ft_strlcat(dest, " world", 20);
+    print_test("ft_strlcat", strcmp(dest, "hello world") == 0);
+
+    // Teste ft_atoi
+    print_test("ft_atoi(\"42\")", ft_atoi("42") == 42);
+    print_test("ft_atoi(\"-42\")", ft_atoi("-42") == -42);
+    print_test("ft_atoi(\"  123\")", ft_atoi("  123") == 123);
+
+    // Teste ft_calloc
+    int *arr = (int *)ft_calloc(5, sizeof(int));
+    int zeros = 1;
+    if (arr) {
+        for (int i = 0; i < 5; i++)
+            if (arr[i] != 0) zeros = 0;
+        free(arr);
+    }
+    print_test("ft_calloc", arr != NULL && zeros);
+
+    // Teste ft_strdup
+    char *dup = ft_strdup("hello");
+    print_test("ft_strdup", dup != NULL && strcmp(dup, "hello") == 0);
+    if (dup) free(dup);
+
+    // Teste ft_substr
+    char *sub = ft_substr("hello world", 6, 5);
+    print_test("ft_substr", sub != NULL && strcmp(sub, "world") == 0);
+    if (sub) free(sub);
+
+    // Teste ft_strjoin
+    char *join = ft_strjoin("hello", " world");
+    print_test("ft_strjoin", join != NULL && strcmp(join, "hello world") == 0);
+    if (join) free(join);
+
+    // Teste ft_strtrim
+    char *trim = ft_strtrim("xxxhelloxxx", "x");
+    print_test("ft_strtrim", trim != NULL && strcmp(trim, "hello") == 0);
+    if (trim) free(trim);
+
+    // Teste ft_split
+    char **split = ft_split("hello world test", ' ');
+    int split_ok = 0;
+    if (split && split[0] && split[1] && split[2] && !split[3]) {
+        split_ok = strcmp(split[0], "hello") == 0 && 
+                   strcmp(split[1], "world") == 0 &&
+                   strcmp(split[2], "test") == 0;
+        for (int i = 0; split[i]; i++)
+            free(split[i]);
+        free(split);
+    }
+    print_test("ft_split", split_ok);
+
+    // Teste ft_itoa
+    char *num = ft_itoa(42);
+    print_test("ft_itoa(42)", num != NULL && strcmp(num, "42") == 0);
+    if (num) free(num);
+    
+    num = ft_itoa(-42);
+    print_test("ft_itoa(-42)", num != NULL && strcmp(num, "-42") == 0);
+    if (num) free(num);
+
+    printf("\n========== TESTES CONCLUÍDOS ==========\n\n");
+    return (0);
+}

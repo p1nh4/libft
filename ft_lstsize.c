@@ -6,7 +6,7 @@
 /*   By: davidos- <davidos-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/01 17:53:47 by davidos-          #+#    #+#             */
-/*   Updated: 2025/11/01 18:17:29 by davidos-         ###   ########.fr       */
+/*   Updated: 2025/11/02 21:46:11 by davidos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	ft_lstsize(t_list *lst)
 
 	len = 0;
 	node = lst;
-	while (lst != NULL)
+	while (node != NULL)
 	{
 		len++;
 		node = node->next;

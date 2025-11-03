@@ -6,7 +6,7 @@
 /*   By: davidos- <davidos-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/29 22:21:16 by davidos-          #+#    #+#             */
-/*   Updated: 2025/10/29 22:56:47 by davidos-         ###   ########.fr       */
+/*   Updated: 2025/11/02 23:01:00 by davidos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char	*p_s;
 	char	*start_ps;
 
+	if (!s || !f)
+		return ((void *)0);
 	len_s = ft_strlen(s);
 	p_s = malloc((len_s + 1) * sizeof(char));
 	if (!p_s)

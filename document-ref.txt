@@ -1,0 +1,3 @@
+libc
+	https://stackoverflow.com/questions/20396471/what-is-libc-what-are-the-functions-it-includes-how-can-we-get-the-source-code
+

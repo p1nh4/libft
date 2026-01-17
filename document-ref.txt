@@ -1,3 +1,11 @@
 libc
 	https://stackoverflow.com/questions/20396471/what-is-libc-what-are-the-functions-it-includes-how-can-we-get-the-source-code
-
+	
+	https://github.com/lucAsC87/libftquickman/blob/main/libft's%20friendly%2C%20quick%20%26%20dirty%20man.md
+	https://medium.com/@ahmed.ezzouine/1337-libft-static-library-in-c-0b292982eb81
+	https://github.com/zelhajou/ft_core_libft
+	https://github.com/resherra/libft/blob/master/Makefile
+	https://github.com/mcombeau/libft/blob/main/Makefile
+	https://github.com/MarkosComK/42-Libft/blob/main/src/Makefile
+	https://github.com/juggorr/libft/blob/master/Makefile
+	 
